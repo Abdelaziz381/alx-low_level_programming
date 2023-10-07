@@ -20,11 +20,11 @@ int main(void)
 	}
 	else if (n == 0)
 	{
-		printf("%d is zore\n", n);
+		printf("%d is zero\n", n);
 	}
 	else if (n < 0)
 	{
-		printf("%d is nigative\n", n);
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
