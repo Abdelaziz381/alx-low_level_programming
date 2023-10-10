@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
+ * main - function prints text as output
+ *
  * main - Prints _putchar.
  * Return : return (0)
- * File:main.h
- * Desc:header file containing functions declaration
+ 
  */
 int main(void)
 {
