@@ -3,6 +3,8 @@
 /**
  * main - Prints _putchar.
  * Return : return (0)
+ * File:main.h
+ * Desc:header file containing functions declaration
  */
 int main(void)
 {
