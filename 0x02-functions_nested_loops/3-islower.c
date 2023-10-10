@@ -7,10 +7,9 @@
  */
 
 int _islower(int var)
-	{
+{
 	if (var >= 'a' && var <= 'z')
 	return (1);
 
 	return (0);
-	}
 }
