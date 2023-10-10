@@ -1,10 +1,15 @@
+#include <unistd.h>
+
 /**
 *File:main.h
 *
-*Desc:header file containing functions declaration
+*Desc:header file containing functions dec
 */
 
 int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 int _islower(int c);
 int _isalpha(int c);
 int print_sign(int n);

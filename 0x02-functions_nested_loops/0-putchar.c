@@ -1,15 +1,10 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
 #include "main.h"
 
-/**
+/*sdasd*
  * main - Prints _putchar.
- * Return: Always 0 (Success)
+ * Return
+ * 
  */
-void _putchar(char c) {
-  write(1, &c, 1);
-}
 
 int main()
 	{
