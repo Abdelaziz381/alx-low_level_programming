@@ -2,9 +2,9 @@
 
 /**
  * main - Prints _putchar.
- * Return
+ * Return : return (0)
  */
-int main()
+int main(void)
 {
 	char var[10] = "_putchar";
 
