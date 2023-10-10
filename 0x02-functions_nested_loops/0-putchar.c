@@ -4,9 +4,10 @@
  * main - function prints text as output
  *
  * main - Prints _putchar.
- * Return : return (0)
- 
+ *
+ * Return : return 0
  */
+
 int main(void)
 {
 	char var[10] = "_putchar";
