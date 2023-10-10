@@ -1,4 +1,5 @@
-#include <unistd.h>
+#ifndef MAIN_H
+#define MAIN_H
 
 /**
 *File:main.h
@@ -6,10 +7,7 @@
 *Desc:header file containing functions dec
 */
 
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+int _putchar(char);
 int _islower(int c);
 int _isalpha(int c);
 int print_sign(int n);
@@ -22,3 +20,5 @@ void print_alphabet_x10(void);
 void times_table();
 void print_to_98(int);
 void print_times_table(int);
+
+#endif
