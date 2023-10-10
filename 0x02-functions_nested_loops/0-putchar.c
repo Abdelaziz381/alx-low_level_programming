@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-#include <unistd.h>
+#include "main.h"
 
 /**
  * main - Prints _putchar.
