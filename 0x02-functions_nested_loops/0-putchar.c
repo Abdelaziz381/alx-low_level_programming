@@ -18,5 +18,5 @@ int main(void)
 		_putchar(var[i]);
 	}
 	_putchar(10);
-	return 0;
-	}
+	return (0);
+}
