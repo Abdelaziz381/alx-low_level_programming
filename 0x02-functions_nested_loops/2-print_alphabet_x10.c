@@ -8,9 +8,9 @@
 
 void print_alphabet_x10(void)
 {
-	int inc = 0;
+	int i = 0;
 	int var;
-	while (var++ <= 9)
+	while (i++ <= 9)
 	{
 		for (var = 'a'; var <= 'z'; var++)
 			_putchar(var);
