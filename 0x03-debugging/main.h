@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #include <stdio.h>
+
 /*Task 0. Multiple mains */
 void positive_or_negative(int i);
 
@@ -14,4 +15,5 @@ void print_remaining_days(int, int, int);
 /*3. Leap year*/
 int convert_day(int, int);
 
-#endif 
+#endif
+/* MAIN_H */
