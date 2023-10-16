@@ -5,7 +5,7 @@
  * Return : nothing
  */
 
-int _strlen(char *s);
+int _strlen(char *s)
 {
 	int count = 0;
 	int inc = 0;
