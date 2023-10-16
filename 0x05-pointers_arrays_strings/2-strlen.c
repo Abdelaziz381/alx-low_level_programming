@@ -2,7 +2,7 @@
 /**
  * _strlen - return the length of a string.
  * @s : paramter
- * Return : length
+ * Return : returns length;
  */
 
 int _strlen(char *s)
@@ -15,5 +15,5 @@ int _strlen(char *s)
 		inc++;
 		count++;
 	}
-return inc;
+return (inc);
 }
