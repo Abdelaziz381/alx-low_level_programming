@@ -7,7 +7,7 @@
 
 void swap_int(int *a, int *b)
 {
-//declare a new var
+
 int temp = *b;
 *b = *a;
 *a  = temp;
