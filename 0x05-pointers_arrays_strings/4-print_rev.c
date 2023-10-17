@@ -8,11 +8,27 @@
 
 void print_rev(char *str)
 {
-	int a = _strlen(str)+1;
-	while (a != 0)
+	int len  = _strlen(str) - 1;
+	while (len >= 0)
 	{
 		a--;
 		_putchar(str[a]);
 	}
+	_putchar('\n');
 }
 
+/**
+ *_strlen - returns the length of a string
+ * @s: string
+ *Return: returns lenght;
+ */
+
+int _strlen(char *s)
+{
+int count, inc;
+inc = 0;
+for (count = 0; s[count] != '\0'; count++)
+inc++;
+
+return (inc);
+}
