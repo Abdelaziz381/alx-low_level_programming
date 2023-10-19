@@ -1,4 +1,4 @@
-#include "mani.h"
+#include "main.h"
 
 /**
  * leet - function that encode a string
