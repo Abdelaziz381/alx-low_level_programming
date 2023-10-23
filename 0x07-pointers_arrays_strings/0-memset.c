@@ -2,22 +2,21 @@
 
 /**
  * _memcpy - a function that fills memory with a constant byte
- * @bgn: pointer to source memory area
- * @endval: pointer to destination memory area
- * @num: number of bytes
+ * @s: pointer to source memory area
+ * @b: pointer to destination memory area
+ * @n: number of bytes
  *
  * Return: a pointer to endval.
  */
-char *_memcpy(char *endval, char *bgn, unsigned int num)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i = 0;
-	unsigned int j = 0;
 
-	while (a < n)
+	while (i < n)
 	{
-		*(endval + i) = *(bgn + j);
-		i += 1;
-		j += 1;
+	s[i] = b;
+	i++;
 	}
-	return (endval);
+
+	return (s);
 }
