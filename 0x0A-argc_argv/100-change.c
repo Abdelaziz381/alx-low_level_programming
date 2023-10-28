@@ -2,24 +2,48 @@
 #include <stdlib.h>
 
 /**
- * main - program sum two numbers, followed by new line.
- * @argc: int commandline arguments
- * @argv: pointer array of string
- * Return: on sucsses return 0, non-zero return fail
+ * main - prints the min number of coins to make change
+ * for an amount of money
+ * @argc: argument count
+ * @argv: arguments
+ * Return: 0
  */
-
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int sum = 0;
-	char *ch;
+	int total, count, i;
+	char *p;
+	int cents[] = {25, 10, 5, 2};
 
-	while (--argc)
+	if (argc != 2)
 	{
-		for (ch = argv[argc]; *ch; ch++)
-			if (*ch < '0' || *ch > '9')
-				return (printf("Error\n"), 1);
-		sum += atoi(argv[argc])'
+	printf("Error\n");
+	return (1);
 	}
-	printf("%d\n", sum);
+
+	total = strtol(argv[1], &p, 10);
+	count = 0;
+
+	if (!*p)
+	{
+		while (total > 1)
+		{
+			for (i = 0; i < (int)sizeof(cents[i]); i++)
+			{
+				if (total >= cents[i])
+				{
+					count += total / cents[i];
+					total = total % cents[i];
+				}
+			}
+		}
+		if (total == 1)
+			count++;
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
+	printf("%d\n", count);
 	return (0);
 }
