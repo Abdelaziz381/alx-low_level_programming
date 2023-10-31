@@ -20,5 +20,5 @@ char *create_array(unsigned int size, char c)
 	{
 		array_of_chars[size] = c;
 	}
-	return (*array_of_chars);
+	return (array_of_chars);
 }
