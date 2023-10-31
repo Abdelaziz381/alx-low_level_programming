@@ -33,7 +33,7 @@ int c_word(char *s)
 
 char **strtow(char *str)
 {
-	int i, j, len, num = 0, c = 0;
+	int i, j, h, len, num = 0, c = 0;
 	char **w;
 
 	if (str == NULL || *str == '\0')
@@ -50,6 +50,7 @@ char **strtow(char *str)
 	w[num - 1] = NULL;
 
 	i = 0;
+
 	while (str[i])
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
@@ -61,15 +62,21 @@ char **strtow(char *str)
 			j--;
 			if (w[c] == NULL)
 			{
-				for (len = 0; len < j; len++)
-					w[c][len] = str[i + len];
-				w[c][len] = '\0';
-				c++;
-				i += j;
+				for (k = 0; k < c; k++)
+					free(w[k]);
+				
+				free(w[num - 1]);
+				free(w);
+				return (NULL);
 			}
-			else
-				i++;
+			for (len = 0; len < j; len++)
+				w[c][len] = str[i + len];
+			w[c][len] = '\0';
+			c++;
+			i += j;
 		}
+		else
+			i++;
 	}
 	return (w);
 }
