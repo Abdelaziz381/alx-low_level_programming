@@ -30,7 +30,6 @@ int c_word(char *s)
  * @str: string to split
  * Return: pointer to array of strings
  */
-
 char **strtow(char *str)
 {
 	int i, j, h, len, num = 0, c = 0;
@@ -38,19 +37,14 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-
 	num = c_word(str);
 	if (num == 1)
 		return (NULL);
-
 	w = (char **)malloc(num * sizeof(char *));
 	if (w == NULL)
 		return (NULL);
-
 	w[num - 1] = NULL;
-
 	i = 0;
-
 	while (str[i])
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
@@ -64,7 +58,6 @@ char **strtow(char *str)
 			{
 				for (h = 0; h < c; h++)
 					free(w[h]);
-				
 				free(w[num - 1]);
 				free(w);
 				return (NULL);
