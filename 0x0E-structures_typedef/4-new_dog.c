@@ -11,37 +11,31 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int nl, ol, i;
-	dog_t *dog;
+dog_t *dog_;
 
-	if (name == NULL || owner == NULL)
-		return (NULL);
-	dog = malloc(sizeof(dog_t));
-	if (dog == NULL)
-		return (NULL);
-	for (nl = 0; name[nl]; nl++)
-		;
-	nl++;
-	dog->name = malloc(nl * sizeof(char));
-	if (dog->name == NULL)
-	{
-		free(dog);
-		return (NULL);
-	}
-	for (i = 0; i < nl; i++)
-		dog->name[i] = name[i];
-	dog->age = age;
-	for (ol = 0; owner[ol]; ol++)
-		;
-	ol++;
-	dog->owner = malloc(ol * sizeof(char));
-	if (dog->owner == NULL)
-	{
-		free(dog->name);
-		free(dog);
-		return (NULL);
-	}
-	for (i = 0; i < ol; i++)
-		dog->owner[i] = owner[i];
-	return (dog);
+if (name == NULL || age < 0 || owner == NULL)
+return (NULL);
+
+dog_ = malloc(sizeof(dog_t));
+if (dog_ == NULL)
+return (NULL);
+
+dog_->name = malloc(sizeof(char) * (_strlen(name) + 1));
+dog_->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+
+if (dog_->name == NULL || dog_->owner == NULL) {
+
+  if (dog_->name != NULL) {
+    free(dog_->name);
+  }
+  free(dog_);
+  return NULL;
+}
+
+dog_->name = _strcopy(dog_->name, name);
+dog_->age = age;
+dog_->owner = _strcopy(dog_->owner, owner);
+
+return (dog_);
+>>>>>>> 31ed68a13c04310b8490325825ffd238b93ced77
 }
