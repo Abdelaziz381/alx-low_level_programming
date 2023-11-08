@@ -56,18 +56,15 @@ if (dog_ == NULL)
 return (NULL);
 
 dog_->name = malloc(sizeof(char) * (_strlen(name) + 1));
-if (dog_->name == NULL)
-{
-free(dog_);
-return (NULL);
-}
-
 dog_->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-if (dog_->owner == NULL)
-{
-free(dog_->name);
-free(dog_);
-return (NULL);
+
+if (dog_->name == NULL || dog_->owner == NULL) {
+
+  if (dog_->name != NULL) {
+    free(dog_->name);
+  }
+  free(dog_);
+  return NULL;
 }
 
 dog_->name = _strcopy(dog_->name, name);
